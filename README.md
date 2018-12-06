@@ -7,3 +7,22 @@ For a word entered by the user, generate a list of all possible anagrams contain
 
 #Domain Model
 
+```
+╔═══════════════╗
+║ Anagram       ║  
+║               ║           ╔═════════════════╗
+║ #find         ║ --------> ║ Printer(module) ║
+║ #process_word ║           ║ #output         ║
+║ #compare      ║           ╚═════════════════╝
+╚═══════════════╝
+      |  
+      |  
+      |       
+      |   
+╔═══════════════╗
+║ WordList      ║
+║               ║
+║ #generate     ║
+╚═══════════════╝
+
+```
