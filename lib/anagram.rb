@@ -1,6 +1,8 @@
 require_relative "./word_list.rb"
+require_relative "./printer.rb"
 
 class Anagram
+  include Printer
 
   def initialize(source = "../anagrams/wordlist.txt", word_list = WordList)
     @source = source
@@ -19,8 +21,8 @@ class Anagram
       end
 
     end
-
     @anagram_list
+    output(@anagram_list)
   end
 
   def process_word(word)
