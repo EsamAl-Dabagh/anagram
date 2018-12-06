@@ -6,5 +6,10 @@ class Anagram
     word = word.sort
     word = word.join
   end
+
+  def compare(first_word, second_word) 
+    return true if first_word == second_word
+    false
+  end
   
 end
