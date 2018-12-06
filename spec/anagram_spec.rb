@@ -1,7 +1,16 @@
 require_relative "../lib/anagram.rb"
 
 describe Anagram do 
-  let(:anagram) { described_class.new }
+
+  let(:anagram) { 
+    described_class.new("../anagrams/spec/support/test-wordlist.txt")
+  }
+
+  describe "#find" do
+    it "returns array of anagrams" do 
+      expect(anagram.find("Race")).to eq(["Care", "Acre"])
+    end
+  end
 
   describe "#process_word" do
     it "splits up a word, alphabetises, joins it back into a string" do
