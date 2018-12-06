@@ -7,6 +7,10 @@ describe Anagram do
     it "splits up a word, alphabetises, joins it back into a string" do
       expect(anagram.process_word("Race")).to eq("acer")
     end
+
+    it "changes all letters to lowercase" do
+      expect(anagram.process_word("RaCeCaR")).to eq("aaccerr")
+    end
   end
 
   describe "#compare" do
