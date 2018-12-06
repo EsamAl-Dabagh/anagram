@@ -10,6 +10,11 @@ describe Anagram do
     it "returns array of anagrams" do 
       expect(anagram.find("Race")).to eq(["Care", "Acre"])
     end
+
+    it "empties the array when executed" do
+      p anagram.find("Rolof")
+      expect(anagram.find("Race")).to eq(["Care", "Acre"])
+    end
   end
 
   describe "#process_word" do

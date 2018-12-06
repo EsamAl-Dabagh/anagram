@@ -60,6 +60,9 @@ Create a new instance of Anagram:
 Use #find and pass in the word you want to find an anagram for: 
 ```
 2.5.1 :003 > anagram.find("race")
+Acer
+Care
+Acre
 ```
 
 ### Tests

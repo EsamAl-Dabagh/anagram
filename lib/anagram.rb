@@ -11,6 +11,7 @@ class Anagram
   end
 
   def find(subject_word)
+    @anagram_list = []
     processed_subject_word = process_word(subject_word)
 
     @word_list.generate.each do | list_item |
