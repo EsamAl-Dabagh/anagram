@@ -15,8 +15,14 @@ class Anagram
     processed_subject_word = process_word(subject_word)
 
     @word_list.generate.each do | list_item |
+      list_item = list_item.encode('UTF-8', :invalid => :replace, :undef => :replace)
       processed_list_item = process_word(list_item)
-      if compare(processed_subject_word, processed_list_item) && subject_word.downcase != list_item.downcase && !@anagram_list.include?(list_item.capitalize)
+      
+      compared = compare(processed_subject_word, processed_list_item)
+      not_subject_word = subject_word.downcase != list_item.downcase 
+      not_duplicate = !@anagram_list.include?(list_item.capitalize)
+
+      if compared && not_subject_word && not_duplicate
         @anagram_list << list_item.capitalize
       end
     end
@@ -26,7 +32,6 @@ class Anagram
   end
 
   def process_word(word)
-    word = word.encode('UTF-8', :invalid => :replace, :undef => :replace)
     word = word.downcase
     word = word.split("")
     word = word.sort
