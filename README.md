@@ -1,4 +1,4 @@
-#Anagram Solver
+# Anagram Solver
 
 ### The Task
 Imagine you are in a work environment, and a colleague has asked you to create a simple interactive application which can solve anagrams.
@@ -59,7 +59,7 @@ So I can impress my friends
 Clone this repo and navigate to the project folder:
 
 ```
-git clone [URL]
+git clone https://github.com/EsamAl-Dabagh/anagram.git
 cd anagrams
 ```
 
