@@ -16,12 +16,11 @@ class Anagram
 
     @word_list.generate.each do | list_item |
       processed_list_item = process_word(list_item)
-
       if compare(processed_subject_word, processed_list_item) && subject_word.downcase != list_item.downcase && !@anagram_list.include?(list_item.capitalize)
         @anagram_list << list_item.capitalize
       end
-
     end
+
     @anagram_list
     output(@anagram_list)
   end
