@@ -52,7 +52,7 @@ So I can impress my friends
     * Dealing with user entering something other than a string. 
     * Dealing with hypens.  
 * Printer should give feedback if there aren't any anagrams found. 
-* Reduce long conditional on line 19 of `Anagram`.
+* Extract out iteration over `@word_list` in `Anagram#find` into separate method, `#search`.
 
 ### How To Use
 
